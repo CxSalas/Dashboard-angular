@@ -1,0 +1,56 @@
+<app-navbar (toggleSidebar)="onClickSidebar()" > </app-navbar>
+
+<div class="body">
+  
+  <div class="p-grid">
+    
+    <div class="p-col-12">
+
+      <div class="contentbody">
+
+        <div [ngStyle]="{ 'left' : (toggledSidebar ) ? '0px' : '-280px' } " class="sidebar">
+          
+          <div class="avatar-section">
+
+            <div class="avatar">
+
+            </div>
+
+            <div class="avatar-name">
+              Example Dashboard
+            </div>
+
+            <div class="sidebar-menu-container">
+
+              <p-panelMenu [styleClass]="'sidebar-menu-parent'" [model]="items" ></p-panelMenu>
+            </div>
+
+            <div class="white-space-sidebar">
+              
+            </div>
+          
+            
+
+          </div>
+          
+          
+
+        </div>
+  
+        <div [ngClass]="(toggledSidebar ) ? 'contentWrapped' : 'contentFull'" class="content  ">
+  
+
+          <router-outlet></router-outlet>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="p-col-12  p-lg-4">
+      
+    </div>
+    
+  </div>
+
+</div>

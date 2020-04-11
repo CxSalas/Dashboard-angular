@@ -1,0 +1,29 @@
+
+
+  
+<div id="navbar" class="p-grid p-nogutter">
+  <div id="logo-navbar" class="p-col-6">
+
+    <i (click)="toggleWasClicked()" class="fas fa-bars icon icon-menu"> </i>
+
+    {{logo}}
+ 
+  </div>
+
+  <div class="p-col-6 icons-navbar align-right">
+    
+
+    <p-menu appendTo="body" styleClass="menu-navbar" [autoZIndex]="false" #menu [popup]="true" [model]="notificationsItems"></p-menu>
+  
+    <i (click)="menu.toggle($event); "  class="fas fa-bell icon icons-navbar-singular "></i>
+
+
+    <p-menu appendTo="body" styleClass="menu-navbar"  #menuaccount [popup]="true" [model]="accountsItems"></p-menu>
+
+    
+
+    <i (click)="menuaccount.toggle($event); "  class="fas fa-user icon icons-navbar-singular"></i>
+  
+  </div>
+  
+</div>

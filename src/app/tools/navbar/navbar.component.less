@@ -1,0 +1,78 @@
+@import '../../styles/variables.less';
+@import '../../styles/global.less';
+
+
+#navbar {
+  background-color: @primary-color;
+  height: @navbar-height;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  border-bottom: 3px solid @border-color;
+  position: fixed;
+  width: 100%;
+  user-select: none;
+
+  box-shadow: @box-shadow-menu;
+}
+
+#logo-navbar {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: @text-color;
+  height: @navbar-height;
+  padding: 18px;
+  display: inline-flex;
+}
+
+.icons-navbar {
+  color: @text-color;
+  font-size: 1.3rem;
+  padding-right: 18px;
+  cursor: pointer;
+}
+
+.icon-menu {
+  cursor: pointer;
+}
+
+
+/deep/ .menu-navbar {
+  //margin-top: 23px;
+  overflow: visible;
+  position: absolute;
+  background-color: @primary-color !important;
+  border: none !important;
+  box-shadow: @box-shadow-menu;
+
+  
+
+  /deep/ .ui-submenu-header {
+    background-color: @primary-color !important;
+    border-bottom: 5px solid @border-color !important;
+  }
+
+  
+
+}
+
+
+.icons-navbar-singular{
+  background-position: center;
+  transition: background-color 0.3s;
+  border-radius: 40px;
+
+  margin-top: calc(~'@{navbar-height} / 6 ') ;
+  margin-bottom: calc(~'@{navbar-height} / 6 ') ;
+
+  margin-right: 5px;
+  margin-left: 5px;
+
+  //padding-bottom: 10px;
+  padding: 10px;
+
+  &:hover {
+    background-color: @selected-button-color;
+    color: @selected-icon-color;
+  }
+
+}
+

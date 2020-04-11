@@ -1,0 +1,142 @@
+@import '../../styles/variables.less';
+
+.body {
+  background-color: @body-color ;
+  min-height: 100vh;
+  margin: 0px !important;
+  
+  .p-grid .p-col-12 {
+    padding: 0px;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  background-color: @primary-color;
+  min-height: calc(~'100% - @{navbar-height} ' );
+  border-right: 3px solid @border-color;
+  position: fixed;
+  margin-top: @content-separation-navbar ;
+  transition: 0.4s all;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+
+  z-index: 0;
+  box-shadow: @box-shadow-menu;
+  padding-bottom: 30px !important;
+
+}
+
+.contentbody {
+  width: 100%;
+  display: inline-flex;
+}
+
+.content {
+  width: 100%;
+  padding-left: @padding-content-body;
+  padding-right: @padding-content-body;
+  padding-top: 15px;
+  margin-top: @content-separation-navbar ;
+  transition: 0.4s all;
+
+  @media screen and (max-width: 1023px) {
+    padding-left: @padding-content-body-mobile;
+    padding-right: @padding-content-body-mobile;
+
+  }
+
+  @media screen and (min-width: 1700px) {
+    padding-left: @padding-content-body-fullhd;
+    padding-right: @padding-content-body-fullhd;
+
+  }
+
+}
+
+
+
+.avatar {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-color: @border-color;
+  top: 40px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  
+}
+
+.avatar-section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+
+}
+
+.avatar-name { 
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: @text-color;
+  top: 200px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.sidebar-menu-container {
+  top: 250px;
+  text-align: left;
+  position: absolute;
+  margin: auto;
+  padding-bottom: 20px;
+
+  /deep/ .ui-panelmenu {
+    border: none;
+    width: 277px;
+
+    .ui-panelmenu-content {
+      border: none;
+    }
+  }
+
+  /deep/ .ui-panelmenu .ui-panelmenu-header > a {
+    background-color: @primary-color;
+    border: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+
+  /deep/ .ui-panelmenu .ui-panelmenu-header.ui-state-active > a  {
+    background-color: @selected-color !important;
+    color: black;
+    border: none;
+
+    
+  }
+}
+
+
+/* Responsive Sidebar */
+
+.contentWrapped {
+  margin-left: @margin-content-body;
+
+  @media screen and (max-width: 1023px) {
+    margin-left: 0px;
+  }
+
+}
+
+.contentFull {
+  margin-left: 0px;
+}
+
